@@ -27,5 +27,5 @@ Route::group(['prefix' => 'administrator'],function (){
 
 // Frontend
 Route::get('/', function () {
-    return view('frontend.welcome');
+    return view('frontend.index');
 });
