@@ -19,6 +19,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Administrator
 Route::group(['prefix' => 'administrator'],function (){
     Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('administrator.login');
+    Route::get('/dashboard', function () {
+        return view('administrator.mainpage.dashboard');
+        // return view('administrator.layouts.app');
+    });
     Route::group(['middleware'=>'auth'],function (){
         // Route::post('/login', 'Auth\AdminLoginController@login')->name('administrator.login.post');
         // Route::post('/logout', 'Auth\AdminLoginController@logout')->name('administrator.logout');
