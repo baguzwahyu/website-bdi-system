@@ -27,9 +27,9 @@ Route::group(['prefix' => 'administrator'], function () {
 });
 
 // Frontend
-Route::get('/', ['as' => 'home', 'uses' => function () {
-    return view('frontend.mainpage.home');
-}]);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/{page}', [App\Http\Controllers\PagesController::class, 'index'])->name('page');
 
 Route::get('/diklat3in1', ['as' => 'diklat3in1', 'uses' => function () {
     return view('frontend.diklat3in1');
@@ -82,5 +82,3 @@ Route::get('/privacypolicy', ['as' => 'privacypolicy', 'uses' => function () {
 Route::get('/hapusakun', ['as' => 'hapusakun', 'uses' => function () {
     return view('frontend.hapusakun');
 }]);
-
-// Route::get('/folders/list/{id?}', ['as' => 'folders.list', 'uses' => 'FoldersController@getAllFolders'])

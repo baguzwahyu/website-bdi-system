@@ -16,7 +16,7 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto" href="{{ route('home') }}#services">Home</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('home') }}">Home</a></li>
                 <li><a class="nav-link scrollto" href="{{ route('home') }}#services">Profil</a></li>
                 <li><a class="nav-link scrollto " href="{{ route('home') }}#portfolio">Galeri</a></li>
                 <li class="dropdown"><a href="#"><span>Program</span> <i class="bi bi-chevron-down"></i></a>
